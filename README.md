@@ -14,7 +14,9 @@ Welcome to the **Plant Disease Detection System**! This project leverages **Deep
 - [📄 Acknowledgments](#-acknowledgments)  
 
 ---  
-
+## 📄 Description:
+ - Potato diseases pose a significant threat to global food security, causing substantial yield losses. Accurate and timely disease detection is crucial for effective management and control. Recent advancements in image processing and deep learning have revolutionized disease classification, enabling automated and efficient solutions.
+---
 ## 🔍 Overview  
 
 This project uses a **Convolutional Neural Network (CNN)** to classify plant diseases from leaf images. The model helps in early diagnosis, potentially saving crops and improving yield.  
@@ -25,21 +27,30 @@ This project uses a **Convolutional Neural Network (CNN)** to classify plant dis
 
 1. **Data Preprocessing**:  
    - Cleaned and augmented image data for better generalization.  
-   - Split data into training, validation, and testing sets.  
-
-2. **Model Architecture**:  
+   - Split data into training, validation, and testing sets.
+2. **Image Resizing**:
+   - Converting images to (224, 224) a consistent size for efficient processing.
+3. **Image Normalization**:
+   - Adjusting pixel values to a specific range (e.g., 0-1).
+4. **Data Augmentation**:
+   - Creating new training samples by applying transformations:
+        - Rotation 🔄
+        - Flipping 🔁
+        - Zooming 🔍
+        - Cropping ✂️
+5. **Model Architecture**:  
    - Built a CNN with layers optimized for image classification.  
    - Trained on labeled datasets to recognize diseases like early blight, late blight, and more.  
 
-3. **Deployment**:  
-   - Integrated the trained model into a **Streamlit** app for user-friendly interactions.  
+6. **Deployment**:  
+   - Integrated the trained model into a **[Streamlit](https://plant-leaf-desease-classification.streamlit.app/)** app for user-friendly interactions.  
 
 ---  
 
 ## 💻 Technologies Used  
 - **🐍 Python**: Core programming language.  
 - **🖼️ TensorFlow/Keras**: For building and training the CNN model.  
-- **📊 [Streamlit](https://plant-leaf-desease-classification.streamlit.app/)**: For deploying the application.  
+- **📊 Streamlit**: For deploying the application.  
 - **🧮 NumPy & Pandas**: For data handling.  
 - **🌌 Matplotlib & Seaborn**: For visualizing data and results.  
 

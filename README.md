@@ -39,7 +39,7 @@ This project uses a **Convolutional Neural Network (CNN)** to classify plant dis
 ## 💻 Technologies Used  
 - **🐍 Python**: Core programming language.  
 - **🖼️ TensorFlow/Keras**: For building and training the CNN model.  
-- **📊 Streamlit**: For deploying the application.  
+- **📊 [Streamlit](https://plant-leaf-desease-classification.streamlit.app/)**: For deploying the application.  
 - **🧮 NumPy & Pandas**: For data handling.  
 - **🌌 Matplotlib & Seaborn**: For visualizing data and results.  
 
@@ -76,7 +76,7 @@ To set up this project locally:
 
 1. **Clone the repository**:  
    ```bash  
-   git clone https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System.git  
+   https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project.git
 
 
 2. Install the required packages:

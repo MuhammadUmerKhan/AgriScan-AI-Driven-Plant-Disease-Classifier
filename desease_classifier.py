@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-import tensorflow as tf
+import tensorflow
 
 # Streamlit page configuration
 st.set_page_config(
@@ -180,7 +180,7 @@ with tab1:
 
 # Second Tab: Find Defection on Image
 with tab2:
-    MODEL = tf.keras.models.load_model("./model/desease_classifier_v3.h5")
+    MODEL = tensorflow.keras.models.load_model("./model/desease_classifier_v3.h5")
     CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
     
     st.markdown('<div class="section-title">🌿 Plant Disease Classification</div>', unsafe_allow_html=True)

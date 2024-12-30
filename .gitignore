@@ -1,4 +1,6 @@
 data
 clone folder
 frontend
-app
+desease_classifier.py
+images from internet
+requirement.txt

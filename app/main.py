@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("./model/desease_classifier_v3.h5")
+MODEL = tf.keras.models.load_model("../model/desease_classifier_v3.h5")
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 

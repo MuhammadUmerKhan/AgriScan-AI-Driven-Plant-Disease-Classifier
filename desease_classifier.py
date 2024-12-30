@@ -92,7 +92,7 @@ st.markdown("""
 
 
 # Title Heading (appears above tabs and remains on all pages)
-st.markdown('<div class="main-title">🌱 Welcome to the Plant Disease Classification Tool 🌱</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">🌱 Welcome to the Potato Plant Disease Classification Tool 🌱</div>', unsafe_allow_html=True)
 
 # Tab layout
 tab1, tab2 = st.tabs(["🏠 Home", "📋 Find Defection on Image"])

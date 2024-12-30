@@ -209,7 +209,7 @@ with tab2:
             confidence = np.max(predictions[0])
 
             # Display prediction in stylish font
-            st.markdown(f'<br/><br/><br/><br/><br/><br/><br/><br/><br/><div style="color: silver; font-size: 2em; font-weight: bold; text-align: center;">Prediction: {predicted_class} 🍃</div>', unsafe_allow_html=True)
+            st.markdown(f'<br/><br/><br/><br/><br/><br/><br/><div style="color: silver; font-size: 2em; font-weight: bold; text-align: center;">Prediction: {predicted_class} 🍃</div>', unsafe_allow_html=True)
             st.markdown(f'<div style="color: silver; font-size: 2em; font-weight: bold; text-align: center;">Confidence: {confidence:.2f} 🔍</div>', unsafe_allow_html=True)
 
 # Add a separator line before the footer

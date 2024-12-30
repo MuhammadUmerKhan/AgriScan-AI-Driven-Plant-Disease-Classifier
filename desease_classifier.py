@@ -165,7 +165,18 @@ with tab1:
             </ul>
         </div>
     """, unsafe_allow_html=True)
-
+    # Future Work Section
+    st.markdown('<div class="section-title">🚀 Future Work</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="content">
+            While this project currently focuses on potato plant disease classification, I aim to expand its scope to cover:
+            <ul>
+                <li><span class="highlight">🌾 Multi-Crop Disease Detection:</span> Incorporating classification models for other crops like tomatoes, wheat, and corn.</li>
+                <li><span class="highlight">🤝 Farmer-Friendly Mobile App:</span> Developing a user-friendly mobile application to enable real-time field diagnosis and recommendations for farmers.</li>
+            </ul>
+            These enhancements aim to provide a comprehensive tool for farmers and agricultural researchers, contributing to sustainable farming practices. 🌱
+        </div>
+    """, unsafe_allow_html=True)
 
     st.markdown('<div class="section-title">💻 Technologies & Tools</div>', unsafe_allow_html=True)
     st.markdown("""
@@ -183,7 +194,7 @@ with tab2:
     MODEL = tf.keras.models.load_model('./model/desease_classifier_v3.h5')
     CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
     
-    st.markdown('<div class="section-title">🌿 Plant Disease Classification</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-title">🌿 Potato Plant Disease Classification</div>', unsafe_allow_html=True)
     st.markdown('<div class="content">Upload an image of a plant leaf, and the model will predict whether it is affected by Early Blight, Late Blight, or if it is Healthy 🌱.</div><br/>', unsafe_allow_html=True)
 
     # Layout with two columns

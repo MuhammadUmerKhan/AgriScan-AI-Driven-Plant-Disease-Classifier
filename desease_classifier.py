@@ -191,7 +191,7 @@ with tab1:
 
 # Second Tab: Find Defection on Image
 with tab2:
-    MODEL = tf.keras.models.load_model('./model/desease_classifier_v3.h5')
+    MODEL = tf.keras.models.load_model('./model/potato_desease_classifier_v3.h5')
     CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
     
     st.markdown('<div class="section-title">🌿 Potato Plant Disease Classification</div>', unsafe_allow_html=True)

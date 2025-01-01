@@ -44,8 +44,8 @@ This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learni
         - Rotation 🖀
         - Flipping 🖁
 5. **Model Architecture**:  
-   - Built a CNN with layers optimized for image classification.  
-   - Trained on labeled datasets to recognize diseases like early blight, late blight, tomato mosaic virus, and bacterial spot.  
+   - Built a CNN from scratch with layers optimized for image classification.  
+   - Using Transfer Learning train model on labeled datasets to recognize diseases like early blight, late blight, tomato mosaic virus, and bacterial spot.  
 6. **Deployment**:  
    - Integrated the trained model into a **[Streamlit](https://plant-leaf-desease-classification.streamlit.app/)** app for user-friendly interactions.  
 

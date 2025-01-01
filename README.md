@@ -1,6 +1,6 @@
 # 🌱 Plant Disease Detection System 🌿
 
-Welcome to the **Plant Disease Detection System**! This project leverages **Deep Learning** and **Transfer Learning** to identify plant diseases from images, helping farmers and gardeners diagnose issues quickly and effectively. 🌾  
+Welcome to the **Plant Disease Detection System**! This project leverages **Deep Learning** to identify plant diseases from images, helping farmers and gardeners diagnose issues quickly and effectively. 🌾  
 
 ---
 
@@ -26,7 +26,7 @@ Welcome to the **Plant Disease Detection System**! This project leverages **Deep
 
 ## 🔍 Overview  
 
-This project uses a **Convolutional Neural Network (CNN)** to classify plant diseases from leaf images. The model helps in early diagnosis, potentially saving crops and improving yield.  
+This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learning** to classify plant diseases from leaf images. The model helps in early diagnosis, potentially saving crops and improving yield.  
 
 ---  
 

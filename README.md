@@ -22,7 +22,9 @@ Welcome to the **Plant Disease Detection System**! This project leverages **Deep
 
 - **Tomato Plant Disease Detection**: Similar to potato plants, tomato diseases also affect crop yield significantly. This system classifies diseases like tomato mosaic virus, leaf mold, and bacterial spot, enabling early intervention for crop protection.
 
----
+- **Pepper Plant Disease Detection**: Diseases in pepper plants can severely impact their productivity. This classifier focuses on detecting bacterial spot and identifying healthy plants to assist in early disease management.
+
+---  
 
 ## 🔍 Overview  
 
@@ -45,7 +47,7 @@ This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learni
         - Flipping 🖁
 5. **Model Architecture**:  
    - Built a CNN from scratch with layers optimized for image classification.  
-   - Using Transfer Learning train model on labeled datasets to recognize diseases like early blight, late blight, tomato mosaic virus, and bacterial spot.  
+   - Used **Transfer Learning** with pre-trained models like DenseNet for improved accuracy in recognizing diseases like early blight, late blight, bacterial spot, and more.  
 6. **Deployment**:  
    - Integrated the trained model into a **[Streamlit](https://plant-leaf-desease-classification.streamlit.app/)** app for user-friendly interactions.  
 
@@ -62,9 +64,12 @@ This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learni
 
 ## ✔️ Current Work  
 
-- Trained the model to identify diseases in specific plant species (Potato and Tomato).
+- Trained models to identify diseases in specific plant species:
+  - Potato
+  - Tomato
+  - Pepper
 - Deployed a user-friendly app for uploading leaf images and predicting diseases.  
-- Achieved high accuracy on the test dataset.  
+- Achieved high accuracy on the test dataset for all three classifiers.  
 
 ---  
 
@@ -74,7 +79,7 @@ This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learni
    - Expand the dataset to include more plant species and disease types.  
 
 2. **⚙️ Advanced Models**:  
-   - Experiment with transfer learning and pre-trained models like ResNet or EfficientNet.  
+   - Experiment with additional pre-trained models like ResNet or EfficientNet for even better accuracy.  
 
 3. **📈 Improved Metrics**:  
    - Enhance precision and recall for minority disease classes.  
@@ -93,26 +98,27 @@ To set up this project locally:
    git clone https://github.com/MuhammadUmerKhan/Plant-Disease-Detection-System.git
    ```
 
-2. Install the required packages:
+2. **Install the required packages**:
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Run the application:
+3. **Run the application**:
     ```bash
     streamlit run disease_classifier.py
     ```
 
----
+---  
 
 ## 🔄 Prerequisites  
 - Python 3.x
 - Required packages are listed in requirements.txt.
 
----
+---  
 
 ## 📚 Acknowledgments  
 
 - **Datasets:**  
    - [PlantVillage Dataset (Potato)](https://www.kaggle.com/datasets/arjuntejaswi/plant-village) for labeled potato leaf images.
    - [Tomato Leaf Dataset](https://www.kaggle.com/datasets/kaustubhb999/tomatoleaf) for labeled tomato leaf images.
+   - [Pepper Plant Dataset](https://www.kaggle.com/datasets/arjuntejaswi/plant-village) for labeled pepper leaf images.

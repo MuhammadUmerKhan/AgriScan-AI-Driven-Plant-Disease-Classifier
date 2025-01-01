@@ -1,6 +1,6 @@
 # 🌱 Plant Disease Detection System 🌿
 
-Welcome to the **Plant Disease Detection System**! This project leverages **Deep Learning** to identify plant diseases from images, helping farmers and gardeners diagnose issues quickly and effectively. 🌾  
+Welcome to the **Plant Disease Detection System**! This project leverages **Deep Learning** and **Transfer Learning** to identify plant diseases from images, helping farmers and gardeners diagnose issues quickly and effectively. 🌾  
 
 ---
 

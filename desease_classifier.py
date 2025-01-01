@@ -96,7 +96,7 @@ st.markdown("""
 st.markdown('<div class="main-title">🌱 Welcome to the Potato Plant Disease Classification Tool 🌱</div>', unsafe_allow_html=True)
 
 # Tab layout
-tab1, tab2, tab3 = st.tabs(["🏠 Dashboard", "🥔 Potato Disease Analysis", "🍅 Tomato Disease Analysis"])
+tab1, tab2, tab3, tab4 = st.tabs(["🏠 Dashboard", "🥔 Potato Disease Analysis", "🍅 Tomato Disease Analysis", "🌶️ Pepper Disease Analysis"])
 
 # First Tab: Home
 with tab1:
@@ -173,6 +173,40 @@ with tab1:
                         <li><span class="highlight">🤝 Steps to Reproduce:</span>
                             <ul>
                                 <li>Captured in a real tomato farm.</li>
+                                <li>Uncontrolled environment using a high-resolution digital camera and smartphone.</li>
+                                <li>Dataset aids researchers in computer vision.</li>
+                            </ul>
+                        </li>
+                        <li><span class="highlight">🔄 Data Preprocessing and Augmentation:</span>
+                            <ul>
+                                <li><span class="highlight">Image Cleaning:</span>
+                                    <ul>
+                                        <li>Removing noise, artifacts, and unwanted objects.</li>
+                                    </ul>
+                                </li>
+                                <li><span class="highlight">Image Resizing:</span>
+                                    <ul>
+                                        <li>Converting images to a consistent size for efficient processing.</li>
+                                    </ul>
+                                </li>
+                                <li><span class="highlight">Image Normalization:</span>
+                                    <ul>
+                                        <li>Adjusting pixel values to a specific range (e.g., 0-1).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="highlight">🌶️ Pepper Plant Disease Detection:</span> 
+                    Built disease detection 🦠 model to identify different pepper diseases using Transfer Learning 🧠. 
+                    The model was trained on a 
+                    <a href="https://www.kaggle.com/datasets/arjuntejaswi/plant-village" target="_blank" style="color: silver; font-weight: bold;">dataset</a>
+                    of pepper plant images and is deployed for real-time predictions. 📡<br/>
+                    <ul>
+                        <li><span class="highlight">🤝 Steps to Reproduce:</span>
+                            <ul>
+                                <li>Captured in a real pepper farm.</li>
                                 <li>Uncontrolled environment using a high-resolution digital camera and smartphone.</li>
                                 <li>Dataset aids researchers in computer vision.</li>
                             </ul>
@@ -349,6 +383,66 @@ with tab3:
                 status_message = f"Your 🍅 plant is <span style='color: #4CAF50;'>{predicted_class_name}</span>  🌱."
             else:
                 status_message = f"Disease Detected: <span style='color: #c40000;'>{predicted_class_name}</span> 🦠."
+
+            # Display the result with dynamic color for the disease name only
+            st.markdown(f'''
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div style="font-size: 2em; font-weight: bold; text-align: center;">
+                {status_message}
+            </div>
+            <div style="color: silver; font-size: 2em; font-weight: bold; text-align: center;">
+                Confidence: {confidence:.2f} 🔍.
+            </div>
+            ''', unsafe_allow_html=True)
+
+    # Add a separator line before the footer
+    st.markdown('<div class="separator"></div>', unsafe_allow_html=True)
+with tab4:   
+    st.markdown('<div class="section-title">🌶️ Pepper Plant Disease Classification 🦠</div>', unsafe_allow_html=True)
+    st.markdown('''
+    <div class="content">
+        Upload a clear image of a tomato plant leaf 🌶️, and the model will identify its health status or diagnose any potential disease from the following:
+        <ul>
+            <li>Pepper Bell Healthy 🌱.</li>
+            <li>Pepper Bell Bacterial Spot 🦠.</li>
+        </ul>
+    </div><br/>
+    ''', unsafe_allow_html=True)
+
+    # Layout with two columns
+    col1, col2 = st.columns([1, 2])  # 1: Image section, 2: Prediction section
+
+    with col1:
+        uploaded_file = st.file_uploader("⬆️ Upload a leaf image:", type=["jpg", "jpeg", "png"])
+        
+        if uploaded_file is not None:
+            # Display the uploaded image
+            image = Image.open(uploaded_file)
+            st.image(image, caption="Uploaded Image", width=250)  # Adjust the width as needed
+
+    with col2:
+        if uploaded_file is not None:
+            # Preprocess the image
+            img = load_img(uploaded_file, target_size=(256, 256))
+            img_array = img_to_array(img)
+            img_array = img_array / 255.0
+            img_array = np.expand_dims(img_array, axis=0) 
+
+            # Load the trained model
+            pepper_classifier_model = tf.keras.models.load_model('./model/pepper_desease_classifier_v1.h5')
+
+            predictions = pepper_classifier_model.predict(img_array)
+            confidence = predictions[0][0]
+
+            # Assign colors based on health status
+            threshold = 0.5
+            if confidence <= threshold:
+                predicted_class_name = "Bacterial Spot"
+                status_message = f"Disease Detected: <span style='color: #c40000;'>{predicted_class_name}</span>  🦠."
+                confidence = 1 - confidence
+            else:
+                predicted_class_name = "Healthy"
+                status_message = f"Your 🌶️ plant is <span style='color: #4CAF50;'>{predicted_class_name}</span> 🌱."
 
             # Display the result with dynamic color for the disease name only
             st.markdown(f'''

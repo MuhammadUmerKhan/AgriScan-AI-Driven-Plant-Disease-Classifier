@@ -43,8 +43,6 @@ This project uses a **Convolutional Neural Network (CNN)** and **Transfer Learni
    - Creating new training samples by applying transformations:
         - Rotation 🖀
         - Flipping 🖁
-        - Zooming 🔍
-        - Cropping ✂️
 5. **Model Architecture**:  
    - Built a CNN with layers optimized for image classification.  
    - Trained on labeled datasets to recognize diseases like early blight, late blight, tomato mosaic virus, and bacterial spot.  

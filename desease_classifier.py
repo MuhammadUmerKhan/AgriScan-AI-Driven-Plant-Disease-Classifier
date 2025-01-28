@@ -463,4 +463,4 @@ st.markdown("""
     <div class="footer">
         Developed by <a href="https://portfolio-sigma-mocha-67.vercel.app" target="_blank" style="color: silver; font-weight: bold;">Muhammad Umer Khan</a>. Powered by TensorFlow and Streamlit. 🌐
     </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)    

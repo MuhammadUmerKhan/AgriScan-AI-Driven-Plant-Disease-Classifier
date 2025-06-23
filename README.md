@@ -1,4 +1,4 @@
-# 🌱 Plant Disease Detection System 🌿
+# 🌱 AgriScan: AI-Driven Plant Disease Classifier 🌿
 
 Welcome to the **Plant Disease Detection System**! This project leverages **Deep Learning** to identify plant diseases from images, helping farmers and gardeners diagnose issues quickly and effectively. 🌾  
 
